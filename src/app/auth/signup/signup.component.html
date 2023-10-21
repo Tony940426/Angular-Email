@@ -1,20 +1,26 @@
 <h3>Create an Account</h3>
-    <form action="" [formGroup]="authForm">
-        <mat-form-field>
-            <mat-label>Username</mat-label>
-            <input matInput formControlName="username">
-        </mat-form-field>
+    <form [formGroup]="authForm" class="ui form">
+
+        <div class="field">
+            <label>Username</label>
+            <input formControlName="username">
+        </div>
+        {{$any(authForm.get('username')).errors | json}}
     
-        <mat-form-field>
-            <mat-label>Password</mat-label>
-            <input matInput formControlName="password">
-        </mat-form-field>
-    
-        <mat-form-field>
-            <mat-label>Password Confirmation</mat-label>
-            <input matInput formControlName="passwordConfrimation">
-        </mat-form-field>
+        <div class="field">
+            <label>Password</label>
+            <input formControlName="password">
+        </div>
+        {{$any(authForm.get('password')).errors | json}}
+
+        <div class="field">
+            <label>Password Confirmation</label>
+            <input formControlName="passwordConfirmation">
+        </div>
+        <div>
+            {{$any(authForm.get('passwordConfirmation')).errors | json}}
+        </div>
         <button mat-raised-button color="primary">Primary</button>
+
     </form>
 
-    
