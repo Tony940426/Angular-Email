@@ -14,7 +14,7 @@ export class SignupComponent {
       Validators.required,
       Validators.minLength(3),
       Validators.maxLength(20),
-      Validators.pattern(/^[a-z0-9]+$/)
+      Validators.pattern(/^[a-zA-Z0-9]+$/)
     ], [this.uniqueUsername.validate]),
     //angular does not run ASYNC validators until all sync validators are completed
     password: new FormControl('', [
