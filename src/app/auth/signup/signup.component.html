@@ -21,6 +21,6 @@
             {{$any(authForm.get('passwordConfirmation')).errors | json}}
         </div>
         <button mat-raised-button color="primary">Primary</button>
-
+        {{authForm.errors | json}}
     </form>
 
