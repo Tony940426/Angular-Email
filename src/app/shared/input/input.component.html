@@ -1,4 +1,9 @@
 <div class="field">
-    <label> {{label}}</label>
+    <label> {{ label }}</label>
     <input [formControl]="control"/>
+    <div *ngif="showErrors()" class="ui pointing red basic label">
+    <p *ngIf="control.errors['required']">
+        Value is Required
+    </p>
+    </div>
 </div>
