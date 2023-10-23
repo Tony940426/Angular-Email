@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators} from '@angular/forms'
 import { MatchPassword } from '../validators/match-password';
 import { UniqueUsername } from '../validators/unique-username';
+import { InputComponent } from 'src/app/shared/input/input.component';
 
 @Component({
   selector: 'app-signup',
